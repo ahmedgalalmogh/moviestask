@@ -1,6 +1,4 @@
-import * as React from "react";
 import { makeStyles } from "@mui/styles";
-import { withStyles } from "@mui/material";
 
 export default makeStyles({
   root: {
