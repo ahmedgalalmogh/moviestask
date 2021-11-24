@@ -1,5 +1,6 @@
 import * as React from "react";
 import { makeStyles } from "@mui/styles";
+import { withStyles } from "@mui/material";
 
 export default makeStyles({
   root: {
@@ -26,7 +27,12 @@ export default makeStyles({
     marginBottom: "10px",
     border: "none !important",
   },
-  accordiansummery: {
+  accordionDetails: {
     background: "#f4f4f4 !important",
+  },
+  accordionSummery: {
+    minWidth: "100%",
+    display: "flex",
+    justifyContent: "space-between",
   },
 });

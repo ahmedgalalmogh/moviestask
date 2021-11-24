@@ -1,11 +1,18 @@
-import { Category } from "./../types/Category";
-import { movie } from "./../types/movie";
-export interface Action {
-  type: string;
-  payload: Category | movie | { catId: number; movieId: number };
+import { Movie } from "../types/movies";
+export interface AddMoviePayload {
+  categoryId: number;
+  movie: Omit<Movie, "id">;
 }
-
-export const ADD_CATEGORY = "ADD_CATEGORY";
-export const ADD_MOVIE = "ADD_MOVIE";
-export const EDIT_MOVIE = "EDIT_MOVIE";
-export const REMOVE_MOVIE = "REMOVE_MOVIE";
+export interface editMoviePayload {
+  categoryId: number;
+  movie: Omit<Movie, "rate">;
+}
+export interface DeleteMoviePayload {
+  categoryId: number;
+  movieId: number;
+}
+export interface CategoryPayload {
+  name: string;
+  movies: Movie[];
+  description?: string;
+}

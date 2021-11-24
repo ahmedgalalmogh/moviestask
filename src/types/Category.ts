@@ -1,7 +1,7 @@
-import { movie } from "./movie";
-
+import { Movie } from "./movies";
 export interface Category {
   id: number;
   name: string;
-  movies: movie[] | [];
+  movies: Movie[];
+  description?: string;
 }
