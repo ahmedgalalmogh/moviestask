@@ -40,7 +40,7 @@ const Form = (props: {
   };
   const validate = () => {
     // validate that the name in only letters and if  it add/update  movie  it check if description is empty or not
-    if (name == "" || /^[a-zA-Z]+$/.test(name) == false) {
+    if (name == "" || /^[a-zA-Z\s]*$/.test(name) == false) {
       alert("please  fill the Name Field (Name only contain characters)");
       return false;
     }
